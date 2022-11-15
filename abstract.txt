@@ -1,6 +1,8 @@
-Learning a complex system is a challenging task. In the Turbulence field, it is rarely possible to have access to DNS and large datasets.
-That is one of the main reasons that lead to the development of simplified models of the Navier-Stokes equations. 
-We are interested in the one known as Shell Models, which has a tractable dimension, and they share with NS fundamental aspects of Turbulence from Kolmogorov Scaling (K41) to Intermittency.
-The standard approach to training a Recurrent Neural Network (LSTM) consists in giving the model each time the points in training data and minimising the loss between the training data and the generated. 
-This creates a discrepancy between what the model learns and what the model has to be able to do. Indeed the model should be able to generate new points starting from an initial condition. We propose a new training method. 
-Each time we give as input to the model the previous generated point. This method shows an increase in performances.
+Learning a complex system is a challenging task. In the Turbulence field, it is rarely possible to have access to direct simulations and large datasets.
+That is one of the main reasons which ask for the development of simplified models of the Navier-Stokes (NS) equations. 
+We focus here on the Shell Models of turbulence, which has a tractable dimension, and they share with NS fundamental aspects from the Kolmogorov Scaling to Intermittency.
+Our goal is to develop a suitable Machine Learning strategy to develop a robust model from data. We have chosen to analyse Recurrent networks.
+The standard approach to the training of a Recurrent Neural Network (for instance LSTM) consists in giving the model each time the points in training data and minimising the loss between the training data and the generated ones. We have found that this approach is not able to provide a correct model.
+In fact, this training approach creates a discrepancy between what the model learns and what the model has to be able to do. Indeed the model should be able to generate new points starting from an initial condition. We propose then a new training method. 
+Each time we give as input to the model the previous generated point. 
+We show through extensive statistical analysis that this method shows an important increase in performances, and we are able to train a model giving excellent agreement with the bare truth, even using few training data.
